@@ -44,3 +44,7 @@ All fields of `docs/MOBILE-IDENTITY-INVENTORY-TEMPLATE.md`: **PENDING ON HORSE.*
 ## Gate-0 verdict
 
 **NO-GO** (unchanged from the template's own verdict). The brain connection itself is complete and read-only-safe; implementation work must not start until the complete package is re-exported from Horse (99/99 hashes) and the Horse-side inventory fields above are filled and contradiction-free.
+
+## Update — later on 13 August 2026
+
+The complete package re-export arrived (outer SHA-256 `e8e19a89…36aff2f`, 98/99 manifest hashes verified, only `.env.example` absent) together with the legal & compliance package (`166136d8…48b277`, 12/12 verified). Both are connected under `handoffs/`. The **package-completeness** condition above is closed; the **Horse-side inventory fields** (canonical repositories, deployment, mobile identity, signing) remain `PENDING ON HORSE`, so Gate 0 as a whole remains **NO-GO** on those fields alone. See `AUDIT-ADDENDUM-COMPLETE-PACKAGE.md`.

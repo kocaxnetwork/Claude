@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-08-13T17:47:05.482Z",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "bodyHeight": 1686,
+      "h1": "Control",
+      "activeTab": "05Control",
+      "visibleBottomNav": "none",
+      "visibleSideRail": "flex",
+      "horizontalOverflow": false
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "bodyHeight": 2960,
+      "h1": "Control",
+      "activeTab": "05Control",
+      "visibleBottomNav": "grid",
+      "visibleSideRail": "none",
+      "horizontalOverflow": false
+    }
+  ],
+  "consoleErrors": []
+}

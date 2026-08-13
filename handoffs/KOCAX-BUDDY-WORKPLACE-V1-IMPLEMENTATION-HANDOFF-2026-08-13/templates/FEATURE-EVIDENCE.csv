@@ -1,0 +1,6 @@
+feature_id,public_label,status,owner,verified_at,release_digest,evidence,limitations
+buddy.workplace,Buddy Workplace,planned,KocaX,,,Local reference preview only,Not connected to production
+buddy.memory,Memory Vault,planned,KocaX,,,Contract and preview exist,No production persistence or deletion proof
+buddy.actions,Controlled actions,planned,KocaX,,,Approval policy reference exists,External execution disabled
+buddy.avatar,Dressable Buddy,planned,KocaX,,,Renderer-independent schema exists,No final art or rights package
+buddy.social,External channels,planned,KocaX,,,Policy only,No live bridges

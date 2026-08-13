@@ -1,0 +1,10 @@
+gate,requirement,evidence,status,owner,reviewer,decision_date,release_digest
+0,Canonical repository and ownership inventory,,blocked,,,,
+1,Architecture and privacy data flow,,blocked,,,,
+2,KocaX Messenger security and claim gate,,blocked,,,,
+3,Native Buddy alpha,,blocked,,,,
+4,Memory and original avatar rights,,blocked,,,,
+5,Bounded calendar action,,blocked,,,,
+6,Data rights recovery and consumer readiness,,blocked,,,,
+7,Closed beta and independent audit,,blocked,,,,
+

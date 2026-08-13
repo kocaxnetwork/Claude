@@ -1,5 +1,7 @@
 # Independent audit — KocaX Buddy Workplace v1 implementation handoff (uploaded archive)
 
+> **SUPERSEDED (same day):** this report audited the first, partial upload (39/99 files). The complete package arrived later on 13 Aug 2026 and passed independent verification — see `AUDIT-ADDENDUM-COMPLETE-PACKAGE.md` in this directory for the current verdict (**GO for local handoff; production NO-GO unchanged**). This report is retained unchanged as the record of the partial-upload state.
+
 **Audit date:** 13 August 2026
 **Auditor:** Independent adversarial review (Claude, read-only against the package; conducted per `docs/INDEPENDENT-AUDIT-PROMPT.md`)
 **Audited object:** Uploaded archive `KOCAXBUDDYWORKPLACEV1IMPLEMENTATIONHANDOFF20260813.zip`, connected to the brain repository at `handoffs/2026-08-13-buddy-workplace-v1/`

@@ -1,0 +1,504 @@
+{
+  "schema": "kx.release.manifest.v1",
+  "package": "KOCAX-BUDDY-WORKPLACE-V1-IMPLEMENTATION-HANDOFF-2026-08-13",
+  "version": "1.0.0",
+  "generatedAt": "2026-08-13T17:49:15.440Z",
+  "fileCount": 99,
+  "files": [
+    {
+      "path": ".env.example",
+      "size": 156,
+      "sha256": "a90380f14b3b3307087f701dd3e337557b79dba68661dea6f5de2a4eaad58688"
+    },
+    {
+      "path": ".gitignore",
+      "size": 73,
+      "sha256": "b49230e6e60dd71acf5fe4a9d29a2154d186ad24d94d9979a309f915ae347566"
+    },
+    {
+      "path": "00-START-HERE.md",
+      "size": 3723,
+      "sha256": "23be21ec63b988e3b056c70acc24716f26cb2a6532ce686e821cd6cf7196d3e5"
+    },
+    {
+      "path": "01-EXECUTIVE-SUMMARY.md",
+      "size": 2016,
+      "sha256": "d01fa9c79e999717eeea933edc2ed928be97d20d772504a2c70f27d990770262"
+    },
+    {
+      "path": "02-DECISION-REGISTER.md",
+      "size": 3026,
+      "sha256": "3d5a2e201e881076a45474dd6ad89c1c28609b0d2a965f5faf8d4136fc7f0609"
+    },
+    {
+      "path": "03-PRODUCT-AND-UX-CONTRACT.md",
+      "size": 3136,
+      "sha256": "fe129f269a0b83b02d41d00faa36101d326e18cd52cd97e59415bdcc19e4592d"
+    },
+    {
+      "path": "04-TECHNICAL-ARCHITECTURE.md",
+      "size": 3710,
+      "sha256": "eb733dcd589b96bcd41421850a714bf25237ba95b57eba70599fd230f8212f58"
+    },
+    {
+      "path": "05-PRIVACY-SECURITY-THREAT-MODEL.md",
+      "size": 3932,
+      "sha256": "8c24e709387f00daca599db80a058c1e3fff2019c2e6ca6f2ea09a7afd50d737"
+    },
+    {
+      "path": "06-IMPLEMENTATION-STATUS.md",
+      "size": 3465,
+      "sha256": "649555f72d15c4215c5edd8981e1eedde75443cfbe92260818bf727141c3b94c"
+    },
+    {
+      "path": "07-BACKLOG-GATES-AND-ACCEPTANCE.md",
+      "size": 4151,
+      "sha256": "8e9dae131f006c03f264a49e32d9e0833dfd9f8c78bea544d950bd20086d4c70"
+    },
+    {
+      "path": "08-DEPLOYMENT-AND-ROLLBACK-RUNBOOK.md",
+      "size": 2225,
+      "sha256": "e915c8969a031ac0b42396fd8bc430f3bbf50a1dae8bfd7ecddce53f051e1b8d"
+    },
+    {
+      "path": "09-CLAIMS-LEGAL-AND-IP-REGISTER.md",
+      "size": 2469,
+      "sha256": "9bd487c38396af39fc4f7d802888643026fb524c0c4adecd3e261b5b25a37104"
+    },
+    {
+      "path": "10-IMPLEMENTATION-MASTER-PROMPT.md",
+      "size": 2439,
+      "sha256": "159d7e22917d70762c71f29f0fda7c4d45113ebdcf14866eb4b837b88cd0d248"
+    },
+    {
+      "path": "apps/api/package.json",
+      "size": 502,
+      "sha256": "6e353d29df7a9e42d55af33e22e0684dad4e1badeddaf38f4dbcbce47c423fbf"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "size": 10114,
+      "sha256": "5521f5e110eba7f66a8450576d1b1b662dfe146b32045085c21047a62f4cdc56"
+    },
+    {
+      "path": "apps/api/src/server.ts",
+      "size": 834,
+      "sha256": "1c93ab3ebaa855a2b2650f3ecd21e435f9d51a12fbbcc28676c67c71d1f0e083"
+    },
+    {
+      "path": "apps/api/src/store.ts",
+      "size": 7674,
+      "sha256": "25dac6df2ef007719efbf0765300d34a8fc39ef247ad1521674b444cda7fe5c9"
+    },
+    {
+      "path": "apps/api/tests/app.test.ts",
+      "size": 12004,
+      "sha256": "8ac57f7777a73414afb189a42d7b3f307a95088909db41dfdcccaa426faaead2"
+    },
+    {
+      "path": "apps/api/tsconfig.build.json",
+      "size": 152,
+      "sha256": "e384008cfb34bdf4eed3513801943afa15d7cc5d4905eed6ea4f60dc1af447c1"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "size": 202,
+      "sha256": "38db579e9b1426cc98c237a75d07b2b42a82d6c7e1137085eb2703c260f5dcc9"
+    },
+    {
+      "path": "apps/workplace/index.html",
+      "size": 591,
+      "sha256": "38cd2d3aff2ed63a6d4ead7fc952c3194380795270e6ab7ce097015448a46f3c"
+    },
+    {
+      "path": "apps/workplace/package.json",
+      "size": 697,
+      "sha256": "cb8dc9308cf57f226189eeccc825d60e00f42fb81c2741c17b1da2881d0d8282"
+    },
+    {
+      "path": "apps/workplace/public/icon.svg",
+      "size": 331,
+      "sha256": "3cd89fc13e411ed25f055693c88967e9c93483c1a65e751a0529c0118aa02ed2"
+    },
+    {
+      "path": "apps/workplace/public/manifest.webmanifest",
+      "size": 406,
+      "sha256": "77d1959e24482d74c24f220a2677c37ed1584ca349b80b5e97935eb602d5a7f9"
+    },
+    {
+      "path": "apps/workplace/src/App.test.tsx",
+      "size": 5688,
+      "sha256": "33a11573ce21943a4c18c8dda56573344a70ef43327ce7bcf768f53bcf6fa96a"
+    },
+    {
+      "path": "apps/workplace/src/App.tsx",
+      "size": 2832,
+      "sha256": "1be7b2bd7af7382b5895af5cf486ab4da36d66b93c79af4781241c3f59daf702"
+    },
+    {
+      "path": "apps/workplace/src/components/ApprovalCard.tsx",
+      "size": 1921,
+      "sha256": "c10143aef3b0e56d8ee3e4f21d330941caa5cf80d5c5bb312ae6697adda44e29"
+    },
+    {
+      "path": "apps/workplace/src/components/BuddyAvatar.tsx",
+      "size": 2003,
+      "sha256": "c23eec8be1ea92efbef747e3562e98cff44c8184fcb94836df49d6381c481491"
+    },
+    {
+      "path": "apps/workplace/src/components/Shell.tsx",
+      "size": 2557,
+      "sha256": "ef4367f682b4fa9556eea7a8f71c3f79eb7c3f9a8c3e59eb4143f93e01af7a1d"
+    },
+    {
+      "path": "apps/workplace/src/data/demo.ts",
+      "size": 4375,
+      "sha256": "ea965fa04a1220ca7572bee6b3c6bd978faad1b4082cf447fbc1c6b6c8a5a9b4"
+    },
+    {
+      "path": "apps/workplace/src/main.tsx",
+      "size": 307,
+      "sha256": "357c70a50bda1194e43de4de06c556c82233e63a92b6879dfa8681399ad7cebe"
+    },
+    {
+      "path": "apps/workplace/src/pages/BuddyPage.tsx",
+      "size": 2738,
+      "sha256": "f368af6d370faf4d1bc92c64dcd011979fac7a3b3a45171802c918b2c2f10002"
+    },
+    {
+      "path": "apps/workplace/src/pages/ChatPage.tsx",
+      "size": 3020,
+      "sha256": "58755fefbd0afc6efd140785f98c2d8169f3809cc474ab404f7905a5125b26f8"
+    },
+    {
+      "path": "apps/workplace/src/pages/ControlPage.tsx",
+      "size": 5127,
+      "sha256": "3ec5b90b29f0a70ba04d0b4ea1bc61af9caa605e6fe33951f1bb29880f5d3d58"
+    },
+    {
+      "path": "apps/workplace/src/pages/TasksPage.tsx",
+      "size": 1893,
+      "sha256": "7c7b5c39307f04b74c38ad5c91a2d1cf222cc234388e724600a6507fa74bd4d0"
+    },
+    {
+      "path": "apps/workplace/src/pages/TodayPage.tsx",
+      "size": 3553,
+      "sha256": "d522fb6932f03fcc4e912446f40db928b4893ef5d4707fc3b0f6be93fadf35f9"
+    },
+    {
+      "path": "apps/workplace/src/styles.css",
+      "size": 27646,
+      "sha256": "1d3fb4237384e389052bfbaf3dbba5df4028be0ba1030161cc2f87ad0c8f4e8a"
+    },
+    {
+      "path": "apps/workplace/src/test/setup.ts",
+      "size": 44,
+      "sha256": "d494b5796f05a8593031aaac07417cfc85d53778b63681fd0cdb7be136448aff"
+    },
+    {
+      "path": "apps/workplace/tsconfig.json",
+      "size": 272,
+      "sha256": "5c8110ba4ccd9cec2663ff6a1ff112ae8f202a351272eb84576521c6e8038a0d"
+    },
+    {
+      "path": "apps/workplace/vite.config.ts",
+      "size": 414,
+      "sha256": "88abfc00e210156bfb3e856fab73a8dc72b272f2ec34c9a74d35b7a78c25c1b8"
+    },
+    {
+      "path": "AUDIT-REPORT.md",
+      "size": 4250,
+      "sha256": "88e148c4a5bc18fb01e144ccf54e9bb968f68ad200cf618e32441b08c67bf13d"
+    },
+    {
+      "path": "contracts/feature-evidence.schema.json",
+      "size": 1494,
+      "sha256": "5b278a7a67b52231b6e05ce34221eb4c19cee8c92fa5688e5224aacfe7291f91"
+    },
+    {
+      "path": "contracts/openapi.yaml",
+      "size": 8331,
+      "sha256": "4d3421aa6e69907298241f79f4abcca62edf26d509bc7608b2195d8347a472ec"
+    },
+    {
+      "path": "docs/ADR-001-PERSONAL-ONLY.md",
+      "size": 631,
+      "sha256": "b96686f8942cd1d5ebdbf5f2f77b23c839dcc88e3fc8d278acbd6d46d776fe68"
+    },
+    {
+      "path": "docs/ADR-002-ONE-BUDDY-IDENTITY.md",
+      "size": 502,
+      "sha256": "a06a88b566836b7c433d60e81967d46b1eecef235b4634ce8eb3995daa9493ea"
+    },
+    {
+      "path": "docs/ADR-003-APPROVALS.md",
+      "size": 1074,
+      "sha256": "c614e8b7bf18fd7471057c938667edc5e3b0105dada4afcb67281435243d653e"
+    },
+    {
+      "path": "docs/ADR-004-AVATAR-BOUNDARY.md",
+      "size": 553,
+      "sha256": "871c2ed45ab9d490554cf323ca373aee02d919068859f932aca14b2b926ab44c"
+    },
+    {
+      "path": "docs/DEPLOYMENT-INVENTORY-TEMPLATE.md",
+      "size": 857,
+      "sha256": "794e845ed2a5c98418b443f8f6191bf908c79e64d865e82de3dacd9eba738494"
+    },
+    {
+      "path": "docs/INDEPENDENT-AUDIT-PROMPT.md",
+      "size": 1797,
+      "sha256": "86c7cc1e5af26f4b6d6a81b4df0ac8665bac388f682ac17c43e37cde79c37984"
+    },
+    {
+      "path": "docs/MOBILE-IDENTITY-INVENTORY-TEMPLATE.md",
+      "size": 739,
+      "sha256": "59a78832df62e0fb62d06d723c28a916508ccc14edaf5abbde2fd49db4a90f21"
+    },
+    {
+      "path": "docs/REPOSITORY-INVENTORY-TEMPLATE.md",
+      "size": 1383,
+      "sha256": "541f03f66b0f69b30cbaea9017773895ef14d53939273eb8f0bddb52f071bcbd"
+    },
+    {
+      "path": "docs/TEST-MATRIX.md",
+      "size": 1388,
+      "sha256": "fb437e98b1bea8d12caeb36bd8c2773a71e62cefc5bfdd9d324db2b183db1950"
+    },
+    {
+      "path": "evidence/SBOM.cyclonedx.json",
+      "size": 43976,
+      "sha256": "b090ef0ea2e7995473f172435d09e0f4aefc8b1e060bcdaf25a880868f44dbdf"
+    },
+    {
+      "path": "evidence/visual/desktop-buddy.png",
+      "size": 629581,
+      "sha256": "4fa2351acbeb46134559e3eb3be241a1d2d6a8f066256af6e6777b39b51c5ccb"
+    },
+    {
+      "path": "evidence/visual/desktop-chat.png",
+      "size": 381924,
+      "sha256": "58569f86f673c35013ce38e0bcbe95196d2c4115b71de983c407cd35b251d9c8"
+    },
+    {
+      "path": "evidence/visual/desktop-control.png",
+      "size": 802559,
+      "sha256": "f19930f6f89e5cac35ba411b7d842ae727a91f088c344c4e514dce2d79b9e4f4"
+    },
+    {
+      "path": "evidence/visual/desktop-tasks.png",
+      "size": 392881,
+      "sha256": "2e2db668ba6193960feed095bf2398b4cf42413c9fa38428e949b20ae40920f2"
+    },
+    {
+      "path": "evidence/visual/desktop-today.png",
+      "size": 715588,
+      "sha256": "8a38bdbb06fbb58b45d42833c317b2aff5a32daa25bb35f7e99fb28ecedcec26"
+    },
+    {
+      "path": "evidence/visual/mobile-buddy.png",
+      "size": 400895,
+      "sha256": "d7c8bad50cbc64bf7aea4e39e7179c9f0064f367c7cb6ae1a6e0c2d7604c6370"
+    },
+    {
+      "path": "evidence/visual/mobile-chat.png",
+      "size": 194225,
+      "sha256": "4a3c5578fbedf7d36737026d83599fc8eb7b1a33c19f1b53c7ee6b3197290f71"
+    },
+    {
+      "path": "evidence/visual/mobile-control.png",
+      "size": 618790,
+      "sha256": "99d2f6b3a51b36b85e11c74cc8e2fc6c481117b8c3f4dec10958adc1b60a99ff"
+    },
+    {
+      "path": "evidence/visual/mobile-tasks.png",
+      "size": 260716,
+      "sha256": "d5f6c74e33336cfdbe8a7aac1accb9969e5e87aa998bc3393ff15b0b518a2fde"
+    },
+    {
+      "path": "evidence/visual/mobile-today.png",
+      "size": 479066,
+      "sha256": "971467a1db9c37a8a5b2a046f0722cf060f760bfe4e78b4f6c1135c12c4c2470"
+    },
+    {
+      "path": "evidence/visual/visual-report.json",
+      "size": 721,
+      "sha256": "e4510820f9044e514a10440e4e61575932e1dae51e93efcb9acf9e4e09718062"
+    },
+    {
+      "path": "FILE-INVENTORY.md",
+      "size": 1448,
+      "sha256": "1f84bde3c4bec5d9aa3e9f07987e43a00e9537f9f97de016e13947d87cc82443"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 122341,
+      "sha256": "45e4719c6a906ff5767c3bf76b9cea2b2979ad6ebc76ef5571565eaa49126355"
+    },
+    {
+      "path": "package.json",
+      "size": 1426,
+      "sha256": "acd17cb92cda86fc183c709f4b44127591656bbecd66ce720f9660668a202f98"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "size": 557,
+      "sha256": "68e908f70dad921df4932e3ce920f2e5d8c96aca50e5bb91c98210ae69401645"
+    },
+    {
+      "path": "packages/contracts/src/actions.ts",
+      "size": 4568,
+      "sha256": "b65197e258ed8e4fdbf7231f86e92dd461aaf21c09d4d392056828c9e73b6de8"
+    },
+    {
+      "path": "packages/contracts/src/avatar.ts",
+      "size": 3375,
+      "sha256": "f307c3091d5671c64b057b48c1433ed31b117de98e7431c865c5c2ad4288fd08"
+    },
+    {
+      "path": "packages/contracts/src/channels.ts",
+      "size": 1806,
+      "sha256": "30b08150727490b7c17008a53cf34eece4a57baf5d5480d8bc8f091f52021c27"
+    },
+    {
+      "path": "packages/contracts/src/ids.ts",
+      "size": 1160,
+      "sha256": "d001dd7fc423f71d32f3aeefe1bd83218f2d295608ff8bcc22393fc39911f08c"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "size": 247,
+      "sha256": "4cab78940557d71e2b8df2e72990e820ff8aeebe854d2597c46f11f296020de1"
+    },
+    {
+      "path": "packages/contracts/src/memory.ts",
+      "size": 2785,
+      "sha256": "296a81bbedafa2be9ca8a6bca36c3868d0cb569e02430e0eaa22ca33ce099d11"
+    },
+    {
+      "path": "packages/contracts/src/passport.ts",
+      "size": 1555,
+      "sha256": "00f93a23247e85a62fa9000c304c137d38092cc2b729542b0290457363424264"
+    },
+    {
+      "path": "packages/contracts/src/product-policy.ts",
+      "size": 597,
+      "sha256": "da421751b881353fdcd3b17b80b38fa8a84a8a35534c9199e62bedc0670280e5"
+    },
+    {
+      "path": "packages/contracts/src/public-copy.ts",
+      "size": 530,
+      "sha256": "0ea7aa780b9b7cbd95050d08c8562d27cf22655a586f9929b788a21072f84b27"
+    },
+    {
+      "path": "packages/contracts/tests/memory-avatar.test.ts",
+      "size": 3967,
+      "sha256": "07f6edb6c706a46339213a78f44b5557a55ff0148ad962e40e80eecc94c3adb1"
+    },
+    {
+      "path": "packages/contracts/tests/policy.test.ts",
+      "size": 3528,
+      "sha256": "14608946e8cecf66bda40432609646f628b2b43fd4a84388b6b3f077f1b999f7"
+    },
+    {
+      "path": "packages/contracts/tsconfig.build.json",
+      "size": 205,
+      "sha256": "3291bcd4841369922e8c4ade00181868a4c1021a98e2c69108c1bddb9c1a09b6"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "size": 195,
+      "sha256": "adc9cd985fc86eea105926169a0532be82f2343b589cad4710fe771a78818c1d"
+    },
+    {
+      "path": "RELEASE-NOTES.md",
+      "size": 1612,
+      "sha256": "06173dcb865e4fdfabc668391d7155580e72c01b49673eae2865bca92ff74081"
+    },
+    {
+      "path": "scripts/generate-manifest.mjs",
+      "size": 1790,
+      "sha256": "0bca102be5afe05c5f90d7858bdf7136275e5a605c20116fb2d46a561eae2c09"
+    },
+    {
+      "path": "scripts/smoke-built-api.mjs",
+      "size": 1142,
+      "sha256": "bcc8b51c928591a00c22d4b07723e685fd1a7eab6e893d22243cfe93a1517d6f"
+    },
+    {
+      "path": "scripts/static-policy-check.mjs",
+      "size": 3547,
+      "sha256": "2cf19b106909aaef20c03dc62921e0e3b172be687d72fc14526b5dd767d6c8dd"
+    },
+    {
+      "path": "scripts/verify-manifest.mjs",
+      "size": 3705,
+      "sha256": "d126f97f19042c8c4f6e1bacfd39eabe18a5fbf3175f13056b56a0b3f72e6a5b"
+    },
+    {
+      "path": "source-plans/00-START-HERE(2).md",
+      "size": 8131,
+      "sha256": "4dbe0d4f490f449b8ac5649314096fa9a607580f4bbccc70d1dd3678d868b79a"
+    },
+    {
+      "path": "source-plans/BUDDY-AVATAR-SYSTEM-PRE-EXECUTION-PLAN-v1.0.md",
+      "size": 36644,
+      "sha256": "858fa9fb599f0111cab343831b7d68b475e9bc3c41fadc1a4fd38ff7be30c5ec"
+    },
+    {
+      "path": "source-plans/KOCAX-BUDDY-PERSONAL-STANDARD-MASTER-PLAN-2026-08-12.md",
+      "size": 55695,
+      "sha256": "c0f3513af624da6e41cb503b75718c7f7bfb7b152e6ea2bfbd981ce4b00a0b31"
+    },
+    {
+      "path": "source-plans/KX-BUDDY-WORKPLACE-KOCAX-MESSENGER-MASTER-PLAN-2026-08-12.md",
+      "size": 44455,
+      "sha256": "4a5152aadee47524467acabd9e4a4b4b243e92806cb8085de52a2d3e9e251eaa"
+    },
+    {
+      "path": "START-DEMO.cmd",
+      "size": 191,
+      "sha256": "0307e1bc05044e51bac11a9bbfb426ac2a7a2a7e19ad1ea599e2da6b46e1a69b"
+    },
+    {
+      "path": "start-demo.sh",
+      "size": 181,
+      "sha256": "6f1b8e7b18acde88cb89fa7728f83c9f3a714a2670c0402094a2b9e24eef02ac"
+    },
+    {
+      "path": "templates/FEATURE-EVIDENCE.csv",
+      "size": 599,
+      "sha256": "1d26e48f8a0152f2882a1be4993ccb4bb96c1677a61837eeba14282e1ce2e419"
+    },
+    {
+      "path": "templates/IP-ASSET-REGISTER.csv",
+      "size": 282,
+      "sha256": "4ad0436ffb8cd7e6a5df0974a235588143c90d7c7fbf15e0041a96e8cb601b81"
+    },
+    {
+      "path": "templates/RELEASE-GATE.csv",
+      "size": 473,
+      "sha256": "72b8c6f3addf39d00bfbcfadf500c4c36e62ea22f84c4c507a6d240b5ddbd1f8"
+    },
+    {
+      "path": "TEST-RESULTS.md",
+      "size": 2760,
+      "sha256": "545f758a5eea8e5dddf0f520321c5232e903fda4222ccb61b4a7281869d7d720"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "size": 475,
+      "sha256": "834700326d10c0be2fc689b6695140c3cd66223485c4ce729828df88cec530a8"
+    },
+    {
+      "path": "VERIFY.cmd",
+      "size": 194,
+      "sha256": "7342342a4d9d3191c6db37d25309b422fd6d7aa8a9b929dc8c73bbe1194ec502"
+    },
+    {
+      "path": "VISUAL-QA-REPORT.md",
+      "size": 1796,
+      "sha256": "b0bdb4d9bba010f830f7964ce79d3f9d30390154f01d7ec2a360316a59debd9d"
+    }
+  ]
+}
