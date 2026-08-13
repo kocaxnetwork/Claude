@@ -33,7 +33,7 @@ Dutch legal & compliance start dossier for the consumer launch (concept 1.0): te
 
 ### audits/2026-08-13-buddy-legal-compliance/
 
-Integrity and structure verified (hashes, manifest, register counts). A detailed consistency review of the dossier contents (cross-file contradictions, forbidden absolute claims, placeholder inventory, cross-check against the implementation package's frozen decisions) is being finalized and lands here as `AUDIT-REPORT.md`.
+**`AUDIT-REPORT.md`** — full consistency audit of the legal dossier (two independent reviewers over all nine content documents). Verdict: **structurally complete and fit for its stated purpose (lawyer handoff + engineering gate input) after the P1 fixes**; publication NO-GO stands per the dossier's own register. Headline P1 items: "SpaceXAI" vendor-naming error, `allow_fallbacks` carve-out contradicting the anchor mandate, missing Broadcast toggle in the OpenRouter checklist, self-contradictory residual-risk-10 threshold, one absolute claim inside the approved consumer copy, unverified statutory contact channel, NL/EN divergences inside TERMS/PRIVACY, and drafter instructions left in publishable text. No factual value mismatches (price, KvK, Btw, contact, flows) anywhere; no forbidden absolute claim in the consumer documents; all five ZDR guardrail controls consistently specified.
 
 ## Current gate status (13 August 2026)
 
