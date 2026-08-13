@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kocax.example/contracts/feature-evidence.schema.json",
+  "title": "KocaX public feature evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "release", "features"],
+  "properties": {
+    "schema": { "const": "kx.feature.evidence.v1" },
+    "release": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["featureId", "publicLabel", "status", "owner", "evidence"],
+        "properties": {
+          "featureId": { "type": "string", "pattern": "^[a-z][a-z0-9._-]{2,80}$" },
+          "publicLabel": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "status": { "enum": ["available", "beta", "limited", "planned", "unsupported"] },
+          "owner": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "verifiedAt": { "type": ["string", "null"], "format": "date-time" },
+          "releaseDigest": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 240 }
+          },
+          "limitations": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 240 },
+            "default": []
+          }
+        }
+      }
+    }
+  }
+}
+

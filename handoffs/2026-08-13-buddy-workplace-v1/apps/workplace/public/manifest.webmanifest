@@ -1,0 +1,17 @@
+{
+  "name": "KocaX Buddy Workplace — Reference Preview",
+  "short_name": "Buddy",
+  "description": "Local, non-production reference preview for Buddy Workplace.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071118",
+  "theme_color": "#071118",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+openapi: 3.1.0
+info:
+  title: KocaX Buddy Reference API
+  version: 1.0.0
+  description: >-
+    Non-production contract for Personal Buddy Workplace. External execution is
+    disabled. x-kx-dev-session is a local test fixture and not authentication.
+servers:
+  - url: http://127.0.0.1:8787
+    description: Local loopback reference only
+tags:
+  - name: Bootstrap
+  - name: Memory
+  - name: Actions
+  - name: Control
+paths:
+  /health:
+    get:
+      operationId: health
+      responses:
+        "200":
+          description: Reference server health; always exposes execution status.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, mode, execution]
+                properties:
+                  status: { const: ok }
+                  mode: { const: reference-preview }
+                  execution: { const: disabled }
+  /v1/bootstrap:
+    get:
+      tags: [Bootstrap]
+      operationId: bootstrap
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+      responses:
+        "200":
+          description: Personal, server-scoped Buddy data for the authenticated session.
+        "401": { $ref: "#/components/responses/Unauthenticated" }
+  /v1/memories:
+    post:
+      tags: [Memory]
+      operationId: createMemory
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/MemoryCreate" }
+      responses:
+        "201": { description: Policy-valid memory created; persistent scope requires explicit owner consent and session scope remains transient. }
+        "400": { description: Invalid strict schema. }
+        "403": { description: Memory policy denied an invalid consent/scope combination. }
+        "422": { description: Requested memory expiry is not in the future. }
+  /v1/memories/{memoryId}:
+    parameters:
+      - $ref: "#/components/parameters/DevSession"
+      - name: memoryId
+        in: path
+        required: true
+        schema: { type: string, pattern: "^mem_[A-Za-z0-9]{8,64}$" }
+    get:
+      tags: [Memory]
+      operationId: getMemory
+      responses:
+        "200": { description: Owner-scoped memory. }
+        "404": { description: Not found, including cross-workspace object. }
+    patch:
+      tags: [Memory]
+      operationId: updateMemory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                value: { type: string, minLength: 1, maxLength: 2000 }
+                status: { enum: [active, locked, expired] }
+                expiresAt: { type: string, format: date-time }
+      responses:
+        "200": { description: Updated memory. }
+        "404": { description: Not found. }
+    delete:
+      tags: [Memory]
+      operationId: deleteMemory
+      responses:
+        "204": { description: Memory moved to deleted lifecycle state. }
+        "404": { description: Not found. }
+  /v1/actions/{actionId}/approve:
+    post:
+      tags: [Actions]
+      operationId: approveAction
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+        - name: actionId
+          in: path
+          required: true
+          schema: { type: string, pattern: "^act_[A-Za-z0-9]{8,64}$" }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [payloadDigest, nonce]
+              properties:
+                payloadDigest: { type: string, pattern: "^[a-f0-9]{64}$" }
+                nonce: { type: string, minLength: 24, maxLength: 128 }
+      responses:
+        "200":
+          description: Native approval recorded with a not-executed reference receipt.
+        "403":
+          description: Exact binding or policy denied approval; R3 is unavailable in this reference.
+        "409":
+          description: Approval already consumed.
+        "423":
+          description: Workspace is globally paused.
+  /v1/actions/{actionId}/approval-challenge:
+    get:
+      tags: [Actions]
+      operationId: getApprovalChallenge
+      description: >-
+        Issues the owner-scoped, Workplace-only challenge already bound by digest
+        to the action. External bridges have no approval surface.
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+        - name: actionId
+          in: path
+          required: true
+          schema: { type: string, pattern: "^act_[A-Za-z0-9]{8,64}$" }
+      responses:
+        "200":
+          description: Single-use reference challenge for the native Workplace surface.
+        "404":
+          description: Action is absent, expired, consumed or outside the owner workspace.
+        "423":
+          description: Workspace is globally paused.
+  /v1/connections/{connectionId}:
+    delete:
+      tags: [Control]
+      operationId: revokeConnection
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+        - name: connectionId
+          in: path
+          required: true
+          schema: { type: string, pattern: "^con_[A-Za-z0-9]{8,64}$" }
+      responses:
+        "200": { description: Owner-scoped connection revoked. }
+        "404": { description: Not found. }
+  /v1/profile:
+    patch:
+      tags: [Control]
+      operationId: updateProfile
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                displayName: { type: string, minLength: 1, maxLength: 32 }
+                reducedMotion: { type: boolean }
+      responses:
+        "200": { description: Profile changed without changing canonical Buddy identity. }
+  /v1/export:
+    post:
+      tags: [Control]
+      operationId: exportBuddyPassport
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+      responses:
+        "200":
+          description: Allowlisted Buddy Passport that explicitly excludes secrets and keys.
+  /v1/pause:
+    post:
+      tags: [Control]
+      operationId: setGlobalPause
+      parameters:
+        - $ref: "#/components/parameters/DevSession"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [paused]
+              properties:
+                paused: { type: boolean }
+      responses:
+        "200": { description: Immediate reference pause state. }
+components:
+  parameters:
+    DevSession:
+      name: x-kx-dev-session
+      in: header
+      required: true
+      description: Test fixture only; production must use a real server-verified session.
+      schema: { type: string }
+  responses:
+    Unauthenticated:
+      description: Missing or invalid server-resolved session.
+  schemas:
+    MemoryCreate:
+      type: object
+      additionalProperties: false
+      required: [category, scope, value, reason, source, consent]
+      properties:
+        category:
+          enum: [profile_fact, preference, routine, project, document_reference, temporary_context, sensitive]
+        scope: { enum: [personal, channel_local, session_only] }
+        value: { type: string, minLength: 1, maxLength: 2000 }
+        reason: { type: string, minLength: 1, maxLength: 300 }
+        source:
+          type: object
+          additionalProperties: false
+          required: [channel, sourceRef, ownerSelected]
+          properties:
+            channel: { enum: [kocax, whatsapp, telegram, discord] }
+            sourceRef: { type: string, minLength: 1, maxLength: 180 }
+            ownerSelected: { type: boolean }
+        consent:
+          type: object
+          additionalProperties: false
+          required: [mode, grantedBy]
+          properties:
+            mode: { enum: [explicit, session_only] }
+            grantedBy: { enum: [owner, not_applicable] }
+            grantedAt: { type: string, format: date-time }
+            expiresAt: { type: string, format: date-time }
