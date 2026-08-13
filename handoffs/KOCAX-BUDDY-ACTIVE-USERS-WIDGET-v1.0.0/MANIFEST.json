@@ -1,0 +1,15 @@
+{
+  "name": "KocaX Buddy Active Users Widget",
+  "version": "1.0.0",
+  "date": "2026-08-13",
+  "target": "KocaExpress Next.js 15 App Router",
+  "files": [
+    "components/BuddyActiveCounter.tsx",
+    "components/BuddyActiveCounter.module.css",
+    "app/api/buddy/active-count/route.ts",
+    "README.md",
+    "INTEGRATION-NOTE.md"
+  ],
+  "activeDefinition": "Distinct authenticated Buddy users active within the last 5 minutes",
+  "productionDataIncluded": false
+}

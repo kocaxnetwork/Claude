@@ -24,6 +24,14 @@ KocaX Buddy Workplace v1 implementation handoff (Personal Buddy only). **Complet
 
 Dutch legal & compliance start dossier for the consumer launch (concept 1.0): terms, privacy notice, DPIA draft, DPA requirements, AI-Act disclosure, cookies/consent, 18+ gate, risk register (21 live blockers + 11 first-euro gates + 6 post-launch), claims check, and sources. Outer zip SHA-256 `166136d8…48b277`, **12/12 files hash-verified**. Its own status: **NO-GO for public paid launch** until the register's blocking gates are demonstrably closed; the `<<INVULLEN: …>>` fields in `00-START-HERE.md` must be resolved first. Not legal advice; Dutch lawyer review required per the dossier itself.
 
+### handoffs/KOCAX-BUDDY-LAUNCH-CONTENT-2026-08-13/
+
+Gemini-drafted public launch content ("PROMPT 3"): landing page NL+EN, onboarding screens, four transactional emails, microcopy, and a claims-evidence table. Received as a pasted transcript (no author-side hashes — `SHA256SUMS.txt` here was generated at connection time; see `PROVENANCE.md`). **Audited: not publishable as delivered** — see `audits/2026-08-13-buddy-launch-content/`.
+
+### handoffs/KOCAX-BUDDY-ACTIVE-USERS-WIDGET-v1.0.0/
+
+Next.js 15 drop-in widget showing aggregated Buddy users active in the last 5 minutes. **6/6 files hash-verified** against its own `SHA256SUMS.txt` (outer zip SHA-256 `f8b86679…f4e282`). Deliberately honest design: no fabricated fallback numbers, fail-closed 503s when presence data is unreachable, aggregated-count-only contract. Deployment requires a real presence backend, which does not exist yet. Its `INTEGRATION-NOTE.md` names the canonical website repo as `E:\kocaexpress-v3` (Horse) — a Gate-0-relevant fact now on record.
+
 ### audits/2026-08-13-buddy-workplace-v1/
 
 - **`AUDIT-REPORT.md`** — audit of the first, partial upload (39/99 files). Retained as history; superseded same-day.
