@@ -26,7 +26,15 @@ Dutch legal & compliance start dossier for the consumer launch (concept 1.0): te
 
 ### handoffs/KOCAX-BUDDY-LAUNCH-CONTENT-2026-08-13/
 
-Gemini-drafted public launch content ("PROMPT 3"): landing page NL+EN, onboarding screens, four transactional emails, microcopy, and a claims-evidence table. Received as a pasted transcript (no author-side hashes — `SHA256SUMS.txt` here was generated at connection time; see `PROVENANCE.md`). **Audited: not publishable as delivered** — see `audits/2026-08-13-buddy-launch-content/`.
+Gemini-drafted public launch content ("PROMPT 3"): landing page NL+EN, onboarding screens, four transactional emails, microcopy, and a claims-evidence table. Received as a pasted transcript (no author-side hashes — `SHA256SUMS.txt` here was generated at connection time; see `PROVENANCE.md`). **Audited: NOT PUBLISHABLE as delivered** — see `audits/2026-08-13-buddy-launch-content/`.
+
+### audits/2026-08-13-buddy-launch-content/
+
+**`AUDIT-REPORT.md`** — 72-agent orchestrated audit (seven claim sweeps, every P0/P1 adversarially verified; raw data in `FINDINGS-DATA.json`). Six unique P0 defect classes: false "all servers in the EU" claim, false "we erase all your data" claim, a welcome email stating the legal opposite of the TERMS withdrawal construction, an absolute approval claim the claims rules forbid, a 6-day launch premise against ~31–64+ net working days of open gates, and a claims-evidence table that certifies gated claims from the generating briefing (circular) while missing the withdrawal-waiver sentence entirely. Root cause: **the Gemini briefing presented gated register items as verified facts** — future content must be generated from the brain's claim ledgers, never from a self-contained prompt. The honest elements (no-E2EE disclosure, frozen pricing, integration denials, placeholder discipline) are catalogued for reuse.
+
+### audits/2026-08-13-buddy-active-users-widget/
+
+**`AUDIT-REPORT.md`** — verdict: **GO as reference code, NO-GO for deployment.** The widget is the most honest artifact in the launch set (no fabricated numbers, fail-closed both sides, aggregate-only, real a11y/reduced-motion) and should be the template for future public widgets. Blocking for deployment: no presence backend exists, live gates open, "reconnecting automatically" copy, a windowMinutes mismatch that could inflate the claimed activity window, and its integration note pre-empting the open Gate-0 canonical-repo decision (`E:\kocaexpress-v3` — now recorded as Gate-0 evidence). One audit candidate was refuted in adversarial verification and is recorded as such.
 
 ### handoffs/KOCAX-BUDDY-ACTIVE-USERS-WIDGET-v1.0.0/
 
@@ -51,6 +59,8 @@ Next.js 15 drop-in widget showing aggregated Buddy users active in the last 5 mi
 | Gate 0 — canonical repos/deployment/mobile/signing inventory | **NO-GO — pending on Horse** |
 | Production integration (identity, DB, Messenger crypto, connectors, deployment) | **NO-GO** (explicitly gated by the package) |
 | Public paid consumer launch | **NO-GO** (21 live blockers + 11 first-euro gates in the legal register) |
+| Launch content (landing/onboarding/emails/microcopy) | **NO-GO — rewrite required** (6 P0 defect classes; see launch-content audit) |
+| Active-users widget | **GO as reference code · NO-GO for deployment** (no presence backend; Gate 0 open) |
 
 ## Next actions (owner)
 
